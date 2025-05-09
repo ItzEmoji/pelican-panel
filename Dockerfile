@@ -37,7 +37,7 @@ FROM --platform=$TARGETOS/$TARGETARCH yarn AS yarnbuild
 
 WORKDIR /build
 
-COPY --exclude=Caddyfile --exclude=docker/ . ./
+COPY . ./
 COPY --from=composer /build ./
 
 RUN yarn run build

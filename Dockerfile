@@ -26,7 +26,7 @@ RUN yarn config set network-timeout 300000 \
 # ================================
 FROM --platform=$TARGETOS/$TARGETARCH composer AS composerbuild
 
-COPY --exclude=Caddyfile --exclude=docker/ . ./
+COPY . ./
 
 RUN composer dump-autoload --optimize
 

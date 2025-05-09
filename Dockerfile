@@ -1,8 +1,4 @@
-# syntax=docker.io/docker/dockerfile:1.13-labs
 
-# ================================
-# Stage 1-1: Composer Install
-# ================================
 FROM --platform=$TARGETOS/$TARGETARCH localhost:5000/base-php:$TARGETARCH AS composer
 
 WORKDIR /build
